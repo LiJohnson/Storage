@@ -5,7 +5,8 @@
  */
 var Storage = function( key , storage  ){
 	storage = storage || window.localStorage || {};
-	var data = eval("("+storage[key]+")") || {};
+	var data = JSON.parse(storage[key] || "{}") || {};
+
 
 	/**
 	 * get all value
