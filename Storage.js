@@ -36,7 +36,7 @@ var Storage = function( key , storage  ){
 	/**
 	 * delete a key
 	 */
-	this.delete = function(k){
+	this.remove = function(k){
 		delete data[k];
 		storage[key] = JSON.stringify(data);
 	};
